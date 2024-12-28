@@ -1,0 +1,431 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #e67e22;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #d35400;
+}
+
+.btn-secondary {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #2980b9;
+}
+
+/* Navbar */
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 20px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e67e22;
+  font-family: "Cinzel Decorative", serif;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e67e22;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.253), rgba(0, 0, 0, 0.253)), url("bg_home.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding-top: 50px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 5rem; /* Ukuran lebih besar untuk teks Craftopia */
+  font-weight: bold; /* Membuat teks tebal */
+  margin-bottom: 1.5rem; /* Menambahkan jarak di bawah teks */
+  font-family: "Poppins", sans-serif; /* Menggunakan font modern untuk Craftopia */
+}
+
+.hero .tagline {
+  font-size: 2rem; /* Ukuran font lebih besar untuk tagline */
+  margin-bottom: 2rem; /* Menambahkan jarak di bawah teks */
+  font-family: "Times New Roman", Times, serif; /* Mengatur font menjadi Times New Roman */
+}
+
+/* About Section */
+.about {
+  scroll-margin-top: 40px;
+  padding: 5rem 0;
+  background-color: #fff0f5;
+  margin-bottom: 10px;
+}
+
+.about h2 {
+  font-size: 2.5rem; /* Menyesuaikan ukuran font */
+  font-weight: bold;
+  color: #5d5b5b;
+  text-align: center;
+  margin-bottom: 2rem; /* Mengurangi jarak bawah */
+  font-family: "Poppins", sans-serif;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.features {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.features li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.features li::before {
+  content: "•";
+  color: #e67e22;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.about-image {
+  display: flex;
+  justify-content: flex-end; /* Mengatur gambar ke sebelah kanan */
+}
+
+.about-image img {
+  width: 75%; /* Membuat gambar mengisi lebar penuh kontainernya */
+  height: auto; /* Mempertahankan rasio aspek gambar */
+  max-width: 500px; /* Menentukan lebar maksimum gambar jika diperlukan */
+  border: 5px solid #ffb6c1; /* Menambahkan bingkai berwarna oranye dengan ketebalan 5px */
+  border-radius: 8px; /* Memberikan sudut melengkung pada bingkai */
+}
+
+/* Schedule Section */
+.schedule {
+  scroll-margin-top: 70px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #ff9a9e);
+  background-size: 300% 100%;
+  animation: gradientAnimation 8s infinite;
+}
+
+/* Judul untuk Schedule Section */
+.schedule h2 {
+  font-size: 2.5rem; /* Menyesuaikan ukuran font */
+  font-weight: bold;
+  color: #5d5b5b;
+  text-align: center;
+  margin-bottom: 2rem; /* Mengurangi jarak bawah */
+  font-family: "Poppins", sans-serif;
+}
+
+/* Animasi Background */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Menyesuaikan Layout Grid */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Menambah kolom untuk memaksimalkan ruang */
+  gap: 2rem; /* Menyesuaikan jarak antar kolom */
+}
+
+/* Menyesuaikan ukuran kotak */
+.schedule-card {
+  background-color: white;
+  padding: 0.7rem; /* Mengurangi padding untuk mengecilkan ukuran kotak */
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: auto; /* Menyesuaikan tinggi kotak agar tidak terlalu tinggi */
+  overflow: hidden; /* Mencegah konten meluap */
+}
+
+/* Mengurangi ukuran font dan margin di dalam kotak */
+.schedule-title {
+  font-size: 1.4rem; /* Menyesuaikan ukuran judul */
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  color: #e67e22;
+}
+
+.schedule-description {
+  font-size: 0.9rem; /* Menyesuaikan ukuran deskripsi */
+  margin-bottom: 0.6rem;
+  color: #333;
+}
+
+.schedule-date {
+  font-size: 0.8rem; /* Menyesuaikan ukuran tanggal */
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.schedule-price {
+  font-size: 1rem; /* Menyesuaikan ukuran harga */
+  font-weight: bold;
+  color: #e67e22;
+}
+
+/* Reset default padding dan margin */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Menggunakan ID #register untuk selector yang tepat */
+#register {
+  scroll-margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 110vh;
+  background-color: #fff0f5;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#register h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #5d5b5b;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-box form label {
+  font-weight: bold;
+}
+
+.form-box form input,
+.form-box form select {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-box form button {
+  padding: 10px;
+  background-color: #0ab2f4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.form-box form button:hover {
+  background-color: #39bef3;
+}
+
+/* Footer Styles */
+footer {
+  padding: 2rem 0;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #ff9a9e);
+  background-size: 300% 100%;
+  animation: gradientAnimation 8s infinite;
+  font-style: normal; /* Pastikan tidak ada teks yang di-italic-kan */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(249, 168, 168, 0.3);
+  z-index: 1;
+}
+
+footer p {
+  position: relative;
+  z-index: 2;
+  color: rgb(172, 67, 67);
+  margin-bottom: 0.5rem;
+  font-style: normal; /* Pastikan teks tidak di-italic-kan */
+}
+
+footer .social-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 2;
+}
+
+footer .social-links a {
+  margin-left: 10px;
+}
+
+footer .social-links a:last-child {
+  margin-right: 15px;
+}
+
+footer .social-links a:nth-child(1) {
+  margin-right: 5px;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .col-md-4 {
+  flex: 1;
+}
+
+footer .col-md-4.text-start {
+  text-align: left;
+}
+
+footer .col-md-4.text-center {
+  text-align: center;
+}
+
+footer .col-md-4.text-end {
+  text-align: right;
+}
+
+/* Media query untuk tampilan mobile */
+@media (max-width: 768px) {
+  footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .col-md-4 {
+    margin-bottom: 2rem;
+  }
+
+  footer .social-links {
+    justify-content: center;
+  }
+}
