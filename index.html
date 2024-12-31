@@ -28,7 +28,7 @@
     <header id="home" class="hero">
       <div class="hero-background"></div>
       <div class="container">
-        <h1>Craftopia 2024</h1>
+        <h1>Craftopia 2025</h1>
         <p class="tagline">Create Your Weekend by Crafting</p>
       </div>
     </header>
@@ -60,34 +60,34 @@
     <!-- Schedule Section -->
     <section id="schedule" class="schedule">
       <div class="container">
-        <h2>December Schedule</h2>
+        <h2>January Schedule</h2>
         <div class="schedule-grid">
           <!-- Box 1 -->
-          <div class="schedule-card">
+          <div class="schedule-card chunky-bg">
             <h3 class="schedule-title">Chunky Bag</h3>
             <p class="schedule-description">Learn how to create stylish, oversized chunky bags using thick yarn, perfect for adding a trendy touch to your style.</p>
-            <p class="schedule-date">Date: December 07, 2024</p>
+            <p class="schedule-date">Date: Sunday, 05 January 2025</p>
             <p class="schedule-price">Rp 150.000</p>
           </div>
           <!-- Box 2 -->
-          <div class="schedule-card">
+          <div class="schedule-card pottery-bg">
             <h3 class="schedule-title">Pottery Handbuild</h3>
             <p class="schedule-description">Learn the art of handbuilding pottery by shaping clay into unique, personalized pieces such as bowls, mugs, and sculptures using only your hands and simple tools.</p>
-            <p class="schedule-date">Date: December 14, 2024</p>
+            <p class="schedule-date">Date: Sunday, 12 January 2025</p>
             <p class="schedule-price">Price:Rp 75.000</p>
           </div>
           <!-- Box 3 -->
-          <div class="schedule-card">
+          <div class="schedule-card bento-bg">
             <h3 class="schedule-title">Bento Cake Decor</h3>
             <p class="schedule-description">Learn how to decorate mini bento cakes with intricate designs using various icing techniques to create personalized, beautiful treats.</p>
-            <p class="schedule-date">Date: December 21, 2024</p>
+            <p class="schedule-date">Date: Sunday, 19 January 2025</p>
             <p class="schedule-price">Price:Rp 45.000</p>
           </div>
           <!-- Box 4 -->
-          <div class="schedule-card">
+          <div class="schedule-card parfumery-bg">
             <h3 class="schedule-title">Mini Fun Perfumery</h3>
             <p class="schedule-description">Learn the art of creating your own signature fragrance by blending essential oils and notes to craft personalized, mini perfume bottles.</p>
-            <p class="schedule-date">Date: December 28, 2024</p>
+            <p class="schedule-date">Date: Sunday, 26 January 2025</p>
             <p class="schedule-price">Price:Rp 55.000</p>
           </div>
         </div>
@@ -97,26 +97,25 @@
     <!-- Registration Section -->
     <section id="register">
       <h2>Workshop Registration</h2>
-      <div class="form-box">
-        <form>
+      <form name="Workshop Registration">
+        <div class="form-box">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Enter your full name" required />
 
           <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
+          <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required />
 
           <label for="workshop">Select Workshop</label>
           <select id="workshop" name="workshop" required>
             <option value="">-- Select a workshop --</option>
-            <option value="chunky_bag">Chunky Bag - Rp 150.000</option>
-            <option value="pottery_handbuild">Pottery Handbuild - Rp 75.000</option>
-            <option value="cake_decor">Bento Cake Decor - Rp 45.000</option>
-            <option value="Perfumery">Mini Fun Perfumery - Rp 45.000</option>
+            <option value="Chunky Bag">Chunky Bag - Rp 150.000</option>
+            <option value="Pottery Handbuild">Pottery Handbuild - Rp 75.000</option>
+            <option value="Bento Cake Decor">Bento Cake Decor - Rp 45.000</option>
+            <option value="Mini Fun Perfumery">Mini Fun Perfumery - Rp 45.000</option>
           </select>
-
           <button type="submit">Register Now</button>
-        </form>
-      </div>
+        </div>
+      </form>
     </section>
 
     <!-- Start Footer -->
@@ -154,8 +153,8 @@
     <!-- End Footer -->
 
     <script>
-      const scriptURL = "https://script.google.com/macros/s/AKfycbywl8Im92HlLa4ovQTCAenBVit5OjBMJGdylGFT8K_RVgQOZHOrK4lXj7gvby3uXBPs/exec";
-      const form = document.forms["Orders Form"];
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwdAFOXBshxvqBF7sZ71bS6t2NrWOvEnegp0r7O00EunPToCU_7MMKweXAmB_4TQOiq9w/exec";
+      const form = document.forms["Workshop Registration"];
 
       form.addEventListener("submit", (e) => {
         e.preventDefault(); // Mencegah form melakukan reload

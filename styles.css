@@ -171,9 +171,9 @@ h2 {
 }
 
 .about-image img {
-  width: 75%; /* Membuat gambar mengisi lebar penuh kontainernya */
+  width: 90%; /* Membuat gambar mengisi lebar penuh kontainernya */
   height: auto; /* Mempertahankan rasio aspek gambar */
-  max-width: 500px; /* Menentukan lebar maksimum gambar jika diperlukan */
+  max-width: 1000px; /* Menentukan lebar maksimum gambar jika diperlukan */
   border: 5px solid #ffb6c1; /* Menambahkan bingkai berwarna oranye dengan ketebalan 5px */
   border-radius: 8px; /* Memberikan sudut melengkung pada bingkai */
 }
@@ -234,18 +234,18 @@ h2 {
   font-size: 1.4rem; /* Menyesuaikan ukuran judul */
   font-weight: bold;
   margin-bottom: 0.8rem;
-  color: #e67e22;
+  color: #deb887;
 }
 
 .schedule-description {
   font-size: 0.9rem; /* Menyesuaikan ukuran deskripsi */
   margin-bottom: 0.6rem;
-  color: #333;
+  color: #f0f8ff;
 }
 
 .schedule-date {
   font-size: 0.8rem; /* Menyesuaikan ukuran tanggal */
-  color: #555;
+  color: #deb887;
   margin-bottom: 0.5rem;
 }
 
@@ -255,6 +255,29 @@ h2 {
   color: #e67e22;
 }
 
+.schedule-card {
+  position: relative;
+  color: white; /* Warna teks putih */
+}
+
+/* Menambahkan lapisan overlay gelap */
+.schedule-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Warna hitam dengan opacity 60% */
+  z-index: 1;
+}
+
+/* Memastikan teks berada di atas overlay */
+.schedule-card > * {
+  position: relative;
+  z-index: 2;
+}
+
 /* Reset default padding dan margin */
 * {
   margin: 0;
@@ -262,7 +285,6 @@ h2 {
   box-sizing: border-box;
 }
 
-/* Menggunakan ID #register untuk selector yang tepat */
 #register {
   scroll-margin-top: 5px;
   display: flex;
@@ -284,27 +306,26 @@ h2 {
   font-family: "Poppins", sans-serif;
 }
 
-.form-box {
-  background-color: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
+.form-box button {
+  padding: 5px;
+  background-color: #0ab2f4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  /* Tambahkan properti berikut */
+  display: block;
+  margin: 20px auto 0;
+  width: 150px; /* Atur lebar button */
 }
 
-.form-box form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.form-box form label {
+.form-box label {
   font-weight: bold;
 }
 
-.form-box form input,
-.form-box form select {
+.form-box input,
+.form-box select {
   padding: 10px;
   width: 100%;
   box-sizing: border-box;
@@ -312,8 +333,8 @@ h2 {
   border-radius: 4px;
 }
 
-.form-box form button {
-  padding: 10px;
+.form-box button {
+  padding: 5px;
   background-color: #0ab2f4;
   color: white;
   border: none;
@@ -322,8 +343,24 @@ h2 {
   border-radius: 4px;
 }
 
-.form-box form button:hover {
+.form-box button:hover {
   background-color: #39bef3;
+}
+
+.chunky-bg {
+  background-image: url("chunky-bg.jpg");
+}
+
+.pottery-bg {
+  background-image: url("pottery-bg.jpg");
+}
+
+.bento-bg {
+  background-image: url("bento-bg.jpg");
+}
+
+.parfumery-bg {
+  background-image: url("parfumery-bg.jpg");
 }
 
 /* Footer Styles */
